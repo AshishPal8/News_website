@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Letter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="" onclick="reload()" class="company-logo">
+                <img src="logo.png" alt="logo">
+            </a>
+
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-links nav-items" id="cricket" onclick="onNavItemClick('cricket')">cricket</li>
+                    <li class="hover-links nav-items" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-links nav-items" id="politics" onclick="onNavItemClick('politics')">politics</li>
+                    <li class="hover-links nav-items" id="travel" onclick="onNavItemClick('travel')">Travel</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" id="search-text" class="news-input" placeholder="e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is card title</h3>
+                <h6 class="news-source" id="news-source">VOGUE 15/08/2023</h6>
+                <p id="news-desc" class="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                    impedit optio mollitia qui harum magnam debitis soluta ullam quis eum.</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
